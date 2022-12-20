@@ -1,0 +1,159 @@
+{\rtf1\ansi\ansicpg1252\deff0\nouicompat\deflang1033{\fonttbl{\f0\fnil\fcharset0 HP Simplified Hans Light;}{\f1\fnil\fcharset0 Arial;}{\f2\fnil\fcharset2 Symbol;}}
+{\*\generator Riched20 10.0.19041}\viewkind4\uc1 
+\pard\sa200\sl276\slmult1\qc\ul\b\f0\fs36\lang9 Cab Reservation\par
+
+\pard\sa200\sl276\slmult1\ulnone\fs40 1. \ul Introduction:\par
+\ulnone\fs32 1.1\fs36  \fs32 Purpose:\par
+\b0\fs28 The purpose of this document is to build an online system to manage cab and passengers to ease the cab management. The app should provide an option for customers to book a cab as well as to cancel the booked cab at anytime. It should also provide an option to search for cab availability. \ul\b\fs36\par
+\ulnone\fs32 1.2\fs36  \fs32 Scope of the project:\ul\fs36\par
+\ulnone\b0\fs28 The purpose of the online cab booking system is to ease cab booking and to create a convenient and easy-to-use application for passengers, trying to book cab. The system is based on a relational database with its cab booking function. We will have a database server supporting hundreds of major cities as well as thousands of cabs by various cab companies. Above all, we hope to provide a comfortable user experience along with the best pricing available.\par
+\b\fs32 1.3\fs36  \fs32 Overall description of the project:\b0\f1\fs24\lang16393\par
+
+\pard\li360\qj\b\f0\fs32 PRODUCT PERSPECTIVES\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li1080\qj\b0\fs28 System Interfaces\par
+{\pntext\f2\'B7\tab}User Interfaces\par
+{\pntext\f2\'B7\tab}Hardware Interfaces\par
+{\pntext\f2\'B7\tab}Software Interfaces\par
+{\pntext\f2\'B7\tab}Communications Interfaces\par
+
+\pard\li360\qj\b\fs24\par
+\fs32 User Requirement\par
+\fs24\par
+
+\pard{\pntext\f2\'B7\tab}{\*\pn\pnlvlblt\pnf2\pnindent0{\pntxtb\'B7}}\fi-360\li1080\qj\b0\fs28 Login-system\par
+{\pntext\f2\'B7\tab}Authentication-system\par
+{\pntext\f2\'B7\tab}Cab-booking-System\par
+{\pntext\f2\'B7\tab}Cancellation-System\lang9\par
+
+\pard\qj\par
+
+\pard\sa200\sl276\slmult1\b\fs36 2. Actors:\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\b0\fs28 User\ul\b\fs36\par
+{\pntext\f0 2.\tab}\ulnone\b0\fs28 Admin\ul\b\fs36\par
+{\pntext\f0 3.\tab}\ulnone\b0\fs28 Finance\ul\b\fs36\par
+{\pntext\f0 4.\tab}\ulnone\b0\fs28 Cab owner\ul\b\fs36\par
+
+\pard\sa200\sl276\slmult1\ulnone 3. Funcionalities:\ul\par
+
+\pard 
+{\pntext\f0 1.\tab}{\*\pn\pnlvlbody\pnf0\pnindent0\pnstart1\pndec{\pntxta.}}
+\fi-360\li720\sa200\sl276\slmult1\ulnone\b0\fs32 Admin login\ul\b\fs36\par
+{\pntext\f0 2.\tab}\ulnone\b0\fs32 User login & registeration\ul\b\fs36\par
+{\pntext\f0 3.\tab}\ulnone\b0\fs32 Update user profile\ul\b\fs36\par
+{\pntext\f0 4.\tab}\ulnone\b0\fs32 Finance login\ul\b\fs36\par
+{\pntext\f0 5.\tab}\ulnone\b0\fs32 Cab owner login & registeration\ul\b\fs36\par
+{\pntext\f0 6.\tab}\ulnone\b0\fs32 Search cab\ul\b\fs36\par
+{\pntext\f0 7.\tab}\ulnone\b0\fs32 Book cab\ul\b\fs36\par
+{\pntext\f0 8.\tab}\ulnone\b0\fs32 Update cab details(By cab owner).\ul\b\fs36\par
+{\pntext\f0 9.\tab}\ulnone\b0\fs32 Cab \lang16393 cancellation\ul\b\fs36\lang9\par
+{\pntext\f0 10.\tab}\ulnone\b0\fs32\lang16393 Remove reported cab (by admin).\ul\b\fs36\lang9\par
+
+\pard\sa200\sl276\slmult1\ulnone\fs40 4. Requirements\fs36 :\ul\par
+\ulnone\fs32 4.1 \ul User login page:\par
+\ulnone\b0\fs28 A user login is a page where user can enter the user details like emailId password and can login to the account. It contains the following:\ul\b\fs36\par
+\ulnone\b0\fs28 There should be a text field for collecting user email as input, it should alert the user if the entered data is not an email it will show an error message.Under it there is a text field for collecting user password which has an input type alphanumeric, with a min 8 character.\ul\b\fs36\par
+\ulnone\b0\fs28 A captcha and photo verification should be there, which refresh every time, and only if both of them are correct, the registration button should be enabled, else show an error message.\ul\b\fs36\par
+\ulnone\b0\fs28 Submit button which validate username and password, if email not matching alert user that email is not correct, if password is wrong alert user to change password, else Signin user.\ul\b\fs36\par
+\ulnone\b0\fs28 In the bottom part there should be a button for navigating to Forgot password page followed be a button for navigating to SignUp page and a button for navigating to Admin login page. Below that there should be a google login button which will login with google account.\ul\b\fs36\par
+\ulnone\fs32 4.2 \ul User registration page:\par
+\ulnone\b0\fs28 A user registration is a page where user can enter the user details like username password, email id, profile pic etc. and can create a new account. It contains the following:\ul\fs32\par
+\ulnone\fs28 On the upper part there it should contain text field for entering user email, which collect only email id as data, when not an email id it will show error message followed by a textfield for User password which is alphanumeric with min 8 character.\par
+Below that there should be a  text field for user name, which collect text as input and an image picker should be there which collect image for user profile.\ul\b\fs36\par
+\ulnone\b0\fs28 User confirm password which is alphanumeric with min 8 character. It checks if the entered password is matching or not and if it's not matching it will show an error message.\par
+A captcha and photo verification should be there, which refresh every time, and only if both of them are correct, the registration button should be enabled, else show an error message.\ul\b\fs36\par
+\ulnone\b0\fs28 In the bottom part there should be a button for navigating to User login page.\ul\b\fs36\par
+\ulnone\b0\fs28 A submit button should be there for validating email and password, if email already exists alert user to change email, if password already exists alert user to change email, else create new user.\ul\b\fs36\par
+\ulnone\fs32 4.3 \ul Cab master login page:\par
+\ulnone\b0\fs28 A cab master login is a page where cabmaster can enter the details like emailId password and can login to the account. It contains the following:\ul\b\fs36\par
+\ulnone\b0\fs28 A text field should be there for collecting cab master email as input, it should alert the user if the entered data is not an email it will show an error message.\ul\b\fs36\par
+\ulnone\b0\fs28 A text field for collecting cab master password which has an input type alphanumeric, with a min 8 character.\ul\b\fs36\par
+\ulnone\b0\fs28 A submit button should be there which validate cab master email and password, if cab master email not matching alert user that cab master email is not correct, if password is wrong alert user to change password, else Signin user.\ul\b\fs36\par
+\ulnone\b0\fs28 In the bottom part there should be a button for navigating to Forgot password page followed by a button for navigating to SignUp page and a button for navigating to Admin login page.\par
+Below that there should be a google login button which will login with google account. It will redirect the cab master to homepage.\ul\b\fs36\par
+\ulnone\fs32 4.4 \ul Cab master registration page:\par
+\ulnone\b0\fs28 A cab master registration is a page where cabmaster can enter the details like cabmaster name password, email id, profile pic etc. and can create a new account. It contains the following:\ul\b\fs32\par
+\ulnone\b0\fs28 In the top there should be a text field for entering cab master email, which collect only email id as data, when not an email id it will show error message.\par
+Below that there should be a  text field for cab master name, which collect text as input followed by a textfield for collecting cab route which accept text as input and an image picker should be there which collect image for cab master profile.\ul\b\fs36\par
+\ulnone\b0\fs28 Text field for cab master password which is alphanumeric with min 8 character.\ul\b\fs36\par
+\ulnone\b0\fs28 Cabmaster confirm password which is alphanumeric with min 8 character. It checks if the entered password is matching or not and if it's not matching it will show an error message.\ul\b\fs36\par
+\ulnone\b0\fs28 Button for navigating to User login page.\ul\b\fs36\par
+\ulnone\b0\fs28 Submit button for validating cab master email and password, if cab master email already exists alert user to change cab master email, if password already exists alert user to change username, else create new user.\ul\b\fs36\par
+\ulnone\fs32 4.5 \ul Admin login:\par
+\ulnone\b0\fs28 An admin login is a page where admin can enter the details like emailId password and can login to the account. It contains the following:\ul\b\fs32\par
+\ulnone\b0\fs28 In the top part there should be a text field for Admin email, which collect only email id as data, when not an email id it will show error message followed by a text field for Admin password, which is alphanumeric with min 8 character.\ul\b\fs36\par
+\ulnone\b0\fs28 A submit button should be there in the bottom part which validate Admin email and password, if Admin email not matching alert that Admin email is not correct, if password is wrong alert admin to change password, else Signin admin.\ul\b\fs36\par
+\ulnone\b0\fs28 Below it there should be a button for navigating back to User login page.\ul\b\fs36\par
+\ulnone\fs32 4.6 \ul Update User Profile:\par
+\ulnone\b0\fs28 User update profile is a page where user can update user details like emailId password and can login to the account. It contains the following:\ul\b\fs32\par
+\ulnone\b0\fs28 In the top part there should be a  text field for user name, which collect text as input. The previous username should be shown as the initial data of textfield followed be a text field for changing user password, which is alphanumeric with min 8 character.\ul\b\fs36\par
+\ulnone\b0\fs28 An image picker should be there which collect image for user profile, followed by user's previous profile pic.\ul\b\fs36\par
+\ulnone\b0\fs28 In the bottom part there should be a submit button which will update user details.\ul\b\fs36\par
+\ulnone\b0\fs28 Below submit button there should be a button for navigating back to User login page.\ul\b\fs36\par
+\ulnone\fs32 4.7 \ul Finance login page:\par
+\ulnone\b0\fs28 A finance login is a page where finance manager can enter details like emailId password and can login to the account. It contains the following:\ul\b\fs36\par
+\ulnone\b0\fs28 In the top part there should be a text field for Finance email, which collect only email id as data, when not an email id it will show error message followed be a textfield for Finance password which is alphanumeric with min 8 character.\ul\b\fs36\par
+\ulnone\b0\fs28 In the bottom part there should be a submit button which validate finance name and password, if finance name not matching alert that name is not correct, else if password is wrong it will alert finance manager to change password, else signin finance.\ul\b\fs36\par
+\ulnone\b0\fs28 Below it there should be a button for navigating to Forgot password page.\ul\b\fs36\par
+\ulnone\b0\fs28 Below forgot password button there should be a  button for navigating to SignUp page followed be a button for navigating to User login page.\ul\b\fs36\par
+\ulnone\fs32 4.8 \ul Search cab page:\par
+\ulnone\b0\fs28 Search cab is a page where user can search for available cabs. It contains the following:\ul\b\fs36\par
+\ulnone\b0\fs28 Search bar for searching cab which should collect alphanumeric as input, on typing each letter it should show the cabs that matches the corresponding letter and on touching them it should search for the corresponding cab.\ul\b\fs36\par
+\ulnone\b0\fs28 A clear icon button should be there inside there inside the search bar for clearing the search which should appear only when atleast one letter is there followed by a search icon button that will take the text entered and search for the cabs that matches the text and should give the result as a list with preview information(image, name, route, time). If there is no match it should show, \b "No result found"\b0 .\ul\b\fs36\par
+\ulnone\b0\fs28 On tapping a specific result, it should navigate to a new page where the user get detailed view of cab(image, name, route, time, availablity, rate). A booking button should be there on the bottom which will allow user to book the cab. On tapping the button, if cab is availabile then navgate to the book cab page, else it will show a message like \b "Sorry there is no cab"\b0 .\par
+It should also have a option for searching cab using starting and destination location, for starting location it should also need to collect the user current location. User can either set the starting location as current location or can manually type in the location.\ul\b\fs36\par
+\ulnone\fs32 4.9 \ul Book cab:\par
+\ulnone\b0\fs28 Book cab is a page where user can book a specific cab. It contains the following:\ul\b\fs32\par
+\ulnone\b0\fs28 A textfield should be there on the top for inputting user name as text below that there should be a textfield for inputting user email id.\ul\b\fs36\par
+\ulnone\b0\fs28 It should show the information of cab such as:\ul\b\fs36\par
+\ulnone\b0\fs28\tab\b a.\b0  Cab name\par
+\tab\b b.\b0  Cab route\par
+\tab\b c.\b0  Cab image\par
+\tab\b d.\b0  Cab time (calculated based on distance)\par
+\tab\b f.\b0  Rate (calculated based in distance)\par
+User should enter source and destination address in two textfields, on typing each letter the texfields should give location sujjestions for easiness.\par
+In the bottom part there should be a payment button which on tapping will store the above information for temp and will navigate to payment page.\par
+It should also contain a cancel button which will clear all the entered and navigate back to cab details page.\par
+\b\fs32 4.10 \ul Payment page:\par
+\ulnone\b0\fs28 Payment page is a page where user can enter the payment details like cardnumber mm/yy cvv and can pay the cab. It contains the following:\ul\b\fs32\par
+\ulnone\b0\fs28 In the bottom part there should be a text field for getting user debit/ credit card number, on entering the number it should automatically detect the card company, and if the number is wrong, it should show a error message with red colour like \b "Invalid card number"\b0 .\par
+Below that there should be a text field for getting user debit/ credit card expiry as date format \b mm/yy\b0 , on entering the date it should automatically detect if the date is wrong or not,if it's wrong it should show a error message with red colour like \b "Invalid card expiry"\b0 .\par
+Followed by it there should be a  text field for getting user debit/ credit card cvc as number, on entering the date it should automatically detect if the cvc is wrong or not,if it's wrong it should show a error message with red colour like \b "Invalid cvc"\b0 .\par
+A submit button which on pressed will check if all the informations are correct and if yes, it will make the payment and the user will get a preview of the invoice containing details like: \b\i username, user email, cab name, cab route, cab time, amount\b0\i0 , and the user can download it as pdf or can close the invoice which will navigate the user back to the cab details page, else if the details are not correct it will show a error message like \b "Wrong credentials"\b0 , or if there is any issue in payment it will show error message like \b "Payment failed try again"\b0 .\par
+User should redirect to cabmaster feedback page after payment.\par
+\b\fs32 4.11 \ul Update cab details(by cab master):\par
+\ulnone\b0\fs28 Update cab details is a page where cabmaster can update details like emailId, password, cabmaster name, route, image etc. It contains the following:\ul\b\fs32\par
+\ulnone\b0\fs28 At the top there should be a text field to input cab name( alphanumeric), the previous cab name should be given as initial value of the textfield so that provider may know the previous cab name and below that there should be a text field to input cab number(alphanumeric), the previous cab number should be given as initial value of the textfield so that provider may know the previous cab number.\par
+It should give a Listview of previous cab routes suffixed by a delete button. which on clicking will delete the corresponding cab route.\par
+There should be text field to input cab routes(alphanumeric).\par
+Listview of previous cab schedule with day, time and route suffixed by a delete button should be there in the bottom, which on clicking will delete the corresponding cab schedule.\par
+Below that there should be a textField to input cab schedule in the order, day, time, route and a text field to input cab rate(number), the previous cab rate should be given as initial value of the textfield so that provider may know the previous cab rate.\par
+Image picker should be there to pick image, the previous cab image should be shown on side of the picker so that provider may know the previous cab image.\par
+In the bottom part there should be a submit button that will validate new datas that are entered and update the data, if any error occur while updating data it will alert the user to enter the corresponding field. \par
+\b\fs32 4.12 \ul Feedback page:\par
+\ulnone\b0\fs28 Feedback is a page where user can rate and give feedback for a specific cabmaster. User can also report a cab. It will automaticaly appears when a user complete payment. It contains the following:\ul\b\fs32\par
+\ulnone\b0\fs28 In the top part there should be a  textfield for commenting about the cab master should be there which collect input as text followed by that there should be 5 rating stars which has initial value, 0 star, and on cliking or sliding each star, it should collect the data as eg:- integer for rating. There should be a submit button on the bottom part which on clicking will add the review to cabmaster review, and navigate back to previous screen.\par
+User should also get an option to report cab driver. On clicking repost button it should send a message to admin.\par
+\b\fs32 4.13 \ul Cab cancellation page:\par
+\ulnone\b0\fs28 Cab cancellation page is a page where user can cancel the booked cab, for that it should provide a listview of the booked cabs, along with cancelation button. It contains the following:\par
+In this page user should get  listview of booked cab with details like:\par
+\tab a. Cab name\par
+\tab b. Cab number\par
+\tab c. Cab rate\par
+\tab d. Cab route\par
+\tab e. Cab time\par
+Along with the details there should be a delete button that on clicking will delete the booked cab and refund the amount to user.\par
+\b\fs32 4.14 \ul Remove reported cab page:\par
+\ulnone\b0\fs28 This is a page that only the admin can access. The list of reported cab will be shown in a window. The admin can remove each cab by simply clicking on remove button. It contains the following:\par
+A listview of reported cab, followed by a delete button, which on clicking will delete all the details of that specific cab permenantly from the database, and no one else can see it anymore.\par
+\ul\b\fs32\par
+\par
+\b0\par
+\ulnone\fs28\par
+\par
+\ul\b\fs36\par
+}
+ 
